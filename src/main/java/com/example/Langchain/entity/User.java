@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.util.Date;
 
 @Data
@@ -34,86 +33,33 @@ public class User {
     private String token;
     @Column(name = "role")
     private String role;
-    public String getMssv() {
-        return mssv;
-    }
+    
+    // HU-22: Campo plan
+    @Column(name = "plan")
+    private String plan = "FREE";
 
-
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public String getFname() {
-        return fname;
-    }
-
-    public String getLname() {
-        return lname;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public Date getBirth() {
-        return birth;
-    }
-
-    public void setMssv(String mssv) {
-        this.mssv = mssv;
-    }
-
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setFname(String fname) {
-        this.fname = fname;
-    }
-
-    public void setLname(String lname) {
-        this.lname = lname;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public void setBirth(Date birth) {
-        this.birth = birth;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
+    public String getMssv() { return mssv; }
+    public String getEmail() { return email; }
+    public String getPassword() { return password; }
+    public String getToken() { return token; }
+    public void setToken(String token) { this.token = token; }
+    public String getPhoneNumber() { return phoneNumber; }
+    public String getFname() { return fname; }
+    public String getLname() { return lname; }
+    public String getGender() { return gender; }
+    public Date getBirth() { return birth; }
+    public void setMssv(String mssv) { this.mssv = mssv; }
+    public void setEmail(String email) { this.email = email; }
+    public void setFname(String fname) { this.fname = fname; }
+    public void setLname(String lname) { this.lname = lname; }
+    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
+    public void setPassword(String password) { this.password = password; }
+    public void setGender(String gender) { this.gender = gender; }
+    public void setBirth(Date birth) { this.birth = birth; }
+    public String getRole() { return role; }
+    public void setRole(String role) { this.role = role; }
+    
+    // Métodos para HU-22
+    public String getPlan() { return plan; }
+    public void setPlan(String plan) { this.plan = plan; }
 }
